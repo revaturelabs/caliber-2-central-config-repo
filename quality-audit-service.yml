@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: quality-audit-service
+  datasource:
+    url: jdbc:h2:mem:caliber;Mode=Oracle
+    platform: h2
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      
+server:
+  port: 9075
+  
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}
