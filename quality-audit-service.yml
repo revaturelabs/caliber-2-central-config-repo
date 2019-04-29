@@ -12,7 +12,3 @@ spring:
 server:
   port: 9075
   
-eureka:
-  client:
-    service-url:
-      default-zone: ${EUREKA_HOME}
