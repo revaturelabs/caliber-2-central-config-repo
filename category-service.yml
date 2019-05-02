@@ -9,5 +9,5 @@ spring:
       ddl-auto: create
       
 server:
-  port: 8013
+  port: 10003 
   
