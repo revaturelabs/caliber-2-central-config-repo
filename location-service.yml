@@ -1,13 +1,22 @@
 spring:
   application:
     name: location-service
+      
+server:
+  port: 10004 
+  
+---
+# Development (dev) Environment
+spring:
+  profiles: dev
   datasource:
     url: jdbc:h2:mem:testdb;Mode=PostgreSQL
     platform: h2
   jpa:
     hibernate:
       ddl-auto: create
-      
-server:
-  port: 10004 
-  
+
+---
+# Production (prod) Environment
+spring:
+  profiles: prod
