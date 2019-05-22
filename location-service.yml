@@ -1,9 +1,9 @@
 spring:
   application:
     name: location-service
-      
+
 server:
-  port: 10004 
+  port: 10004
   
 ---
 # Development (dev) Environment
