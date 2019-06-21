@@ -11,3 +11,10 @@ spring:
 server:
   port: 10003
   
+---
+spring:
+  profiles: prod
+
+eureka:
+  instance:
+    prefer-ip-address: true
