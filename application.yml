@@ -1,4 +1,4 @@
 eureka:
   client:
     service-url:
-      default: http://caliber-2-dev-alb-315997072.us-east-1.elb.amazonaws.com/eureka 
+      default: http://caliber-2-dev-alb-315997072.us-east-1.elb.amazonaws.com/eureka

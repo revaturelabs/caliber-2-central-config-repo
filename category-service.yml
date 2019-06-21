@@ -7,7 +7,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-      
+
 server:
-  port: 10003 
+  port: 10003
   
+---
+spring:
+  profiles: prod
+
+eureka:
+  instance:
+    prefer-ip-address: true

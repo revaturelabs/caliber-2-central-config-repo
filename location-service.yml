@@ -1,9 +1,9 @@
 spring:
   application:
     name: location-service
-      
+
 server:
-  port: 10004 
+  port: 10004
   
 ---
 # Development (dev) Environment
@@ -18,5 +18,16 @@ spring:
 
 ---
 # Production (prod) Environment
+# Using a h2 database for now until the env is setup
 spring:
   profiles: prod
+  datasource:
+    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
+    platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+eureka:
+  instance:
+    prefer-ip-address: true
