@@ -9,4 +9,4 @@ spring:
       ddl-auto: create
       
 server:
-  port: 9097
+  port: 10001
