@@ -6,27 +6,21 @@ server:
   port: 10004
   
 ---
-# Development (dev) Environment
+spring:
+  profiles: local
+
+---
 spring:
   profiles: dev
   datasource:
-    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
-    platform: h2
-  jpa:
-    hibernate:
-      ddl-auto: create
-
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    url: ${DB_URL}
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  
 ---
-# Production (prod) Environment
-# Using a h2 database for now until the env is setup
 spring:
   profiles: prod
-  datasource:
-    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
-    platform: h2
-  jpa:
-    hibernate:
-      ddl-auto: create
 
 eureka:
   instance:
