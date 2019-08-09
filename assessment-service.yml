@@ -10,3 +10,23 @@ spring:
       
 server:
   port: 10001
+---
+spring:
+  profiles: local
+
+---
+spring:
+  profiles: dev
+  datasource:
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    url: ${DB_URL}
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  
+---
+spring:
+  profiles: prod
+
+eureka:
+  instance:
+    prefer-ip-address: true
