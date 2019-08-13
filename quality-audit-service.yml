@@ -6,7 +6,10 @@ server:
   port: 10005 
   
 ---
-# Development (dev) Profile
+spring:
+  profiles: local
+
+---
 spring:
   profiles: dev
   datasource:
@@ -14,20 +17,11 @@ spring:
     password: ${DB_PASS}
     url: ${DB_URL}
     driver-class-name: oracle.jdbc.driver.OracleDriver
-
+  
 ---
-# Production (prod) Profile
 spring:
   profiles: prod
-  datasource:
-    url: jdbc:h2:mem:caliber;Mode=Oracle
-    platform: h2
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create
 
 eureka:
-  client:
-    sevice-url:
-      defaultZone: http://caliber-2-dev-alb-315997072.us-east-1.elb.amazonaws.com/eureka
+  instance:
+    prefer-ip-address: true
