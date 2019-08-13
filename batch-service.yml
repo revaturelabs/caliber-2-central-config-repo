@@ -15,12 +15,13 @@ server:
 spring:
   profiles: local
   datasource:
-    platform: h2
+    initialization-mode: always # Will always run data-h2.sql on startup
 
 ---
 spring:
   profiles: dev
   datasource:
+    initialization-mode: never # Will never run data-h2.sql on startup
     username: ${DB_USER}
     password: ${DB_PASS}
     url: ${DB_URL}
