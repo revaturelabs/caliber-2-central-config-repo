@@ -20,6 +20,9 @@ spring:
     password: ${DB_PASS}
     url: ${DB_URL}
     driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
 server:
   port: 80
 ---
