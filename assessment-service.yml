@@ -17,8 +17,6 @@ spring:
     initialize: true # Will always run data-h2.sql on startup
 
 ---
-server:
-  port: 80
 spring:
   profiles: dev
   datasource:
@@ -27,7 +25,8 @@ spring:
     password: ${DB_PASS}
     url: ${DB_URL}
     driver-class-name: oracle.jdbc.driver.OracleDriver
-  
+server:
+  port: 80
 ---
 spring:
   profiles: prod
