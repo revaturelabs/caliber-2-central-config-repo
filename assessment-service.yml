@@ -17,6 +17,8 @@ spring:
     initialize: true # Will always run data-h2.sql on startup
 
 ---
+server:
+  port: 80
 spring:
   profiles: dev
   datasource:
