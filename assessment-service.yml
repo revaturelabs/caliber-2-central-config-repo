@@ -51,8 +51,3 @@ spring:
       ddl-auto: update
 server:
   port: 80
-intercom:
-  service:
-    trainee: ${TRAINEE_URL}
-    category: ${CATEGORY_URL}
-    batch: ${BATCH_URL}
