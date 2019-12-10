@@ -32,3 +32,17 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+---
+spring:
+  profiles: perf
+  datasource:
+    initialize: false
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    url: ${DB_URL}
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 80
