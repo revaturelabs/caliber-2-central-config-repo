@@ -8,13 +8,11 @@ server:
 spring:
   profiles: local
   datasource:
-    initialize: true # Will always run data-h2.sql on startup
-    datasource:
-      url: jdbc:h2:mem:testdb;Mode=PostgreSQL
-      platform: h2
-      jpa:
-        hibernate:
-          ddl-auto: create
+    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
+    platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create
 ---
 spring:
   profiles: dev
