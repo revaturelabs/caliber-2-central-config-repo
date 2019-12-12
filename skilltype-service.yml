@@ -1,12 +1,6 @@
 spring:
   application:
     name: skilltype-service
-  datasource:
-    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
-    platform: h2
-  jpa:
-    hibernate:
-      ddl-auto: create
       
 server:
   port: 10008
@@ -15,7 +9,11 @@ server:
 spring:
   profiles: local
   datasource:
-    initialize: true # Will always run data-h2.sql on startup
+    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
+    platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create
 
 ---
 spring:
